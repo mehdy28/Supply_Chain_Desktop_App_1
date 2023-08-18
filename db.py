@@ -15,11 +15,11 @@ Session = sessionmaker(bind=engine)
 Base.metadata.create_all(engine)
 
 # Load CSV files into DataFrames
-customers_df = pd.read_csv('Data/dim_customers_clean.csv')
-products_df = pd.read_csv('Data/dim_products_clean.csv')
-targets_df = pd.read_csv('Data/dim_targets_orders_clean.csv')
-order_lines_df = pd.read_csv('Data/fact_order_lines_clean.csv')
-order_aggregate_df = pd.read_csv('Data/fact_orders_aggregate_clean.csv')
+customers_df = pd.read_csv('Clean_data/dim_customers_clean.csv')
+products_df = pd.read_csv('Clean_data/dim_products_clean.csv')
+targets_df = pd.read_csv('Clean_data/dim_targets_orders_clean.csv')
+order_lines_df = pd.read_csv('Clean_data/fact_order_lines_clean.csv')
+order_aggregate_df = pd.read_csv('Clean_data/fact_orders_aggregate_clean.csv')
 
 # Insert data into the database using SQLAlchemy and Pandas
 session = Session()
